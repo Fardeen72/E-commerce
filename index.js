@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 const client = twilio("AC9092ec672d7b9eff1c31c48783e3e585", "bd7760c798979c20ee71b81891addfb8");
 
 // 📩 API route
+
 app.post("/order", async (req, res) => {
   const order = req.body;
+    console.log("🔥 ORDER RECEIVED:", req.body); // ADD THIS
 
   let msg = `🛍️ New Order
 
